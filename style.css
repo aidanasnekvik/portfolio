@@ -109,3 +109,47 @@ footer {
         font-size: 1rem;
     }
 }
+
+
+/* Navigation styling */
+.logo-placeholder {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    margin-right: auto;
+}
+
+nav ul {
+    align-items: center;
+}
+
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:active {
+    color: #666;
+}
