@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -19,16 +20,52 @@ header {
     margin-bottom: 2rem;
 }
 
+.logo-placeholder {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    margin-right: auto;
+}
+
 nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-a {
+nav a {
+    position: relative;
     text-decoration: none;
     color: #333;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:active {
+    color: #666;
 }
 
 .hero {
@@ -58,11 +95,40 @@ a {
     margin-bottom: 2rem;
 }
 
-.project-card {
-    background-color: #ddd;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 6px;
+.projects h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-list-clean {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.project-list-clean li a {
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.project-list-clean li a:hover {
+    color: #000;
+    transform: translateX(4px);
+}
+
+.contact {
+    background-color: #eaeaea;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
 }
 
 footer {
@@ -89,7 +155,7 @@ footer {
         gap: 0.5rem;
     }
 
-    .hero, .about, .projects, .project-card {
+    .hero, .about, .projects, .contact {
         padding: 1.5rem;
     }
 
@@ -108,102 +174,4 @@ footer {
     p {
         font-size: 1rem;
     }
-}
-
-.logo-placeholder {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-}
-
-.site-title {
-    font-size: 1.5rem;
-    margin-right: auto;
-}
-
-nav ul {
-    align-items: center;
-}
-
-nav a {
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background-color: #333;
-    transition: width 0.3s ease;
-}
-
-nav a:hover {
-    color: #000;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-nav a:active {
-    color: #666;
-}
-
-/* Project Variant 2 styling */
-.project-grid.variant-2 {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    margin-top: 1.5rem;
-}
-
-.project-tile {
-    position: relative;
-    height: 180px;
-    background: #bbb;
-    border-radius: 6px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.project-tile:hover {
-    transform: scale(1.02);
-}
-
-.tile-overlay {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0,0,0,0.6);
-    color: #fff;
-    width: 100%;
-    padding: 1rem;
-    transition: background 0.3s ease;
-}
-
-.project-list-clean {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    margin-top: 1.5rem;
-}
-
-.project-list-clean li a {
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #333;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.project-list-clean li a:hover {
-    color: #000;
-    transform: translateX(4px);
 }
