@@ -36,6 +36,22 @@ a {
     border-radius: 8px;
 }
 
+.about {
+    background-color: #dcdcdc;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.about h3 {
+    margin-bottom: 1rem;
+}
+
+.about p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
 .projects {
     margin-bottom: 2rem;
 }
