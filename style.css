@@ -15,6 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
@@ -22,6 +23,7 @@ nav ul {
     display: flex;
     gap: 1rem;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 a {
@@ -68,4 +70,42 @@ footer {
     padding: 1rem;
     background-color: #ccc;
     border-radius: 6px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero, .about, .projects, .project-card {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
 }
